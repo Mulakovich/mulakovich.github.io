@@ -18,6 +18,22 @@
             background-color: #f5f5f5;
         }
 
+        .container {
+  display: flex;
+  justify-content: space-between; /* Separa los elementos dejando espacio entre ellos */
+  flex-direction: row; /* Asegurar que los elementos se ordenen horizontalmente */
+}
+
+.sidebar {
+  width: 30%;
+  /* ... otros estilos */
+}
+
+.content {
+  width: 70%;
+  /* ... otros estilos */
+}
+
         .sidebar {
             width: 30%;
             padding: 20px;
@@ -63,9 +79,6 @@
 
         button:hover {
             background-color: #0069d9;
-        }
-    .container {
-            flex-direction: row-reverse; /* Invierte el orden de los elementos */
         }
     </style>
 </head>
