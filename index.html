@@ -13,7 +13,7 @@
       margin: 0;
       min-height: 100vh;
       display: flex;
-      flex-direction: row; /* Horizontal layout */
+      flex-direction: row; /* Change to row for horizontal layout */
       align-items: center;
       justify-content: space-between;
       background-color: #f5f5f5;
@@ -34,7 +34,7 @@
 
     .container {
       display: flex;
-      flex-direction: column; /* Vertical layout for content */
+      flex-direction: column; /* Change to column for vertical layout */
       justify-content: space-between;
       height: 100vh; /* Match body height */
     }
@@ -43,6 +43,7 @@
       width: 30%;
       padding: 20px;
       background-color: #f0f0f0;
+      order: -1; /* Move sidebar to the beginning */
     }
 
     .content {
