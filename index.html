@@ -1,108 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mulakovich Apps</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulakovich   
+ Apps</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;   
 
-            margin: 0;
-            display: flex;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5;
-        }
+      margin: 0; /* Remove default margin for full-height container */
+      min-height: 100vh; /* Set minimum height to cover viewport */
+      display: flex; /* Allow stacking elements vertically */
+      flex-direction: column; /* Stack elements top to bottom */
+      align-items: center; /* Center elements horizontally */
+      justify-content: space-between; /* Distribute elements with space at top and bottom */
+      background-color: #f5f5f5;
+    }
 
-        .header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+    .header {
+      background-color: #f0f0f0;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px; /* Add spacing between header and content */
+    }
 
-        .logo {
-            width: 150px; /* Ajusta el ancho según tu logo */
-        }
+    .logo {
+      width: 150px; /* Adjust width as needed for your logo */
+    }
 
-        .container {
-        display: flex;
-        justify-content: space-between; /* Separa los elementos dejando espacio entre ellos */
-        flex-direction: row-reverse; /* Asegurar que los elementos se ordenen horizontalmente */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .sidebar {
-            width: 30%;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row; /* Ensure elements are arranged horizontally */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .content {
-            width: 70%;
-            padding: 20px;
-        }
+    .sidebar {
+      width: 30%;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            margin: 0;
-        }
+    .content {
+      width: 70%;
+      padding: 20px;
+    }
 
-        p {
-            line-height: 1.5;
-        }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      margin: 0; /* Remove margin for cleaner title placement */
+    }
 
-        a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
-        }
+    p {
+      line-height: 1.5;
+    }
 
-        a:hover {
-            color: #007bff;
-            transform: translateY(-2px);
-        }
+    a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
 
-        button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    a:hover {
+      color: #007bff;
+      transform: translateY(-2px);
+    }
 
-        button:hover {
-            background-color: #0069d9;
-        }
-    </style>
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0069d9;
+    }
+  </style>
 </head>
-<body>
-    <header class="header">
-        <img src="tu-logo.png" alt="Tu Logo" class="logo">
-        <h1>Mulakovich Apps</h1>
-    </header>
-    <div class="container">
-        <div class="content">
-            <h1>Mulakovich Apps</h1>
-            <p>Esta página combina un diseño limpio y minimalista con elementos interactivos para una experiencia de usuario más agradable.</p>
-            <button>¡Explora más!</button>
-        </div>
-        <div class="sidebar">
-            <h3>Mulakovich</h3>
-            <a href="index.html">Apps</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="privacidad.html">Política de Privacidad</a>
-        </div>
+<body>   
+
+  <header class="header">
+    <img src="tu-logo.png" alt="Tu Logo" class="logo">
+    <h1>Mulakovich Apps</h1>
+  </header>
+
+  <div class="container">
+    <div class="content">
+      <h1>Mulakovich Apps</h1>
+      <p>Esta página combina un diseño limpio y minimalista con elementos interactivos para una experiencia de usuario más agradable.</p>
+      <button>¡Explora más!</button>
     </div>
+    <div class="sidebar">
+      <h3>Mulakovich</h3>
+      <a href="index.html">Apps</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Política de Privacidad</a>
+    </div>
+  </div>
 </body>
 </html>
