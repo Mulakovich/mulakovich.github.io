@@ -102,8 +102,14 @@
     .title {
       display: flex;
       align-items: center;
+      justify-content: space-between; /* Aligns elements to the sides */
       font-size: 1.25rem;
       font-weight: bold;
+    }
+
+    .title .left {
+      display: flex;
+      align-items: center;
       gap: 1rem;
     }
 
@@ -114,7 +120,6 @@
     }
 
     .badge {
-      margin-left: auto;
       width: 240px; /* Fixed size for large screens */
       height: auto;
     }
@@ -171,8 +176,10 @@
       <h3>Nuestras Apps:</h3>
       <div class="appsbox">
         <div class="title">
-          <img src="2048logo.webp" alt="2048 EL JUEGO">
-          2048 EL JUEGO
+          <div class="left">
+            <img src="2048logo.webp" alt="2048 EL JUEGO">
+            2048 EL JUEGO
+          </div>
           <a href="https://play.google.com/store/apps/details?id=com.mulakovich.game2048&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
             <img alt="Get it on Google Play" class="badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
           </a>
