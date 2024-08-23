@@ -115,7 +115,7 @@
 
     .badge {
       margin-left: auto;
-      width: 120px;
+      width: clamp(160px, 20vw, 240px); /* Responsive size with a max width */
       height: auto;
     }
 
@@ -134,7 +134,7 @@
       }
 
       .badge {
-        width: 100px;
+        width: clamp(120px, 30vw, 180px); /* Smaller size for mobile */
       }
     }
 
@@ -148,7 +148,7 @@
       }
 
       .badge {
-        width: 80px;
+        width: clamp(100px, 40vw, 160px); /* Further adjustment for small screens */
       }
     }
   </style>
