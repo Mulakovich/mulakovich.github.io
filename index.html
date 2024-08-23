@@ -37,6 +37,18 @@
     vertical-align: middle;
     }
 
+    .appsbox {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    width: 800px;
+    height: 20%;
+    background-color: #f0f0f0;
+      border-color: #000000;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
     .title {
       font-size: 1.5rem;
       font-weight: bold;
@@ -125,9 +137,10 @@
       <p align="center">Desarrollo de aplicaciones de entretenimiento y utilidades para tu dispositivo Android.</p>
       <img src="codelaptop-1024x683.jpg" width="800" height="533" alt="Mulakovich">
       <h3>Nuestras Apps:</h3>
-      <p class="title"><img src="2048logo.webp" class="applogo" alt="2048 EL JUEGO">2048 EL JUEGO</p>
+      <div class="appsbox"><p class="title"><img src="2048logo.webp" class="applogo" alt="2048 EL JUEGO">2048 EL JUEGO</p>
         <p>¡Otra versión más del popular juego 2048, con más funciones y mejoras como la integración de Google Play Juegos para clasificaciones y logros!<br><br>COMO JUGAR: Usa los dedos para mover las celdas. Las celdas con el mismo número se convierten en una mayor al tocarse. ¡Juntalas todas para alcanzar 2048!</p>
-    </div>
+      </div>
+      </div>
   </div>
 </body>
 </html>
