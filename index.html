@@ -125,10 +125,13 @@
     }
 
     .lang {
-      width: 64px;
-      height: auto;
+      position: relative;
+    
+    .lang img {
       position: absolute;
       bottom: 0;
+      width: 64px;
+      height: auto;
     }
 
     @media (max-width: 768px) {
@@ -155,6 +158,11 @@
         font-size: 1.5rem;
       }
 
+      .sidebar,
+      .content {
+        width: 100%;
+      }
+
       .title {
         font-size: 0.9rem;
       }
@@ -176,7 +184,7 @@
       <a href="index.html">Apps</a>
       <a href="contacto.html">Contacto</a>
       <a href="privacidad.html">Política de Privacidad</a>
-      <a href="index_en.html"><img src="img/uk.png" class="lang" alt="English"></a>
+      <div class="lang"><a href="index_en.html"><img src="img/uk.png" alt="English"></a></div>
     </div>
     <div class="content">
       <p>Desarrollo de aplicaciones de entretenimiento y utilidades para tu dispositivo Android.</p>
