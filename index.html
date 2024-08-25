@@ -52,6 +52,7 @@
     }
 
     .sidebar {
+      display: flex;
       width: 20%;
       padding: 1rem;
       background-color: #f0f0f0;
@@ -73,6 +74,7 @@
     }
 
     .content {
+      display: flex;
       width: 80%;
       padding: 1rem;
       background-color: #ffffff;
@@ -124,6 +126,11 @@
       height: auto;
     }
 
+    .lang {
+      width: 64px;
+      height: auto;
+      vertical-align: bottom;
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -160,7 +167,7 @@
 </head>
 <body>
   <header class="headerfooter">
-    <img src="mulakovich logo.png" alt="Mulakovich" class="logo">
+    <img src="img/mklogo.png" alt="Mulakovich" class="logo">
     <h1>Mulakovich Apps</h1>
   </header>
   <div class="container">
@@ -169,16 +176,16 @@
       <a href="index.html">Apps</a>
       <a href="contacto.html">Contacto</a>
       <a href="privacidad.html">Política de Privacidad</a>
-      <a href="index_en.html">English</a>
+      <a href="index_en.html"><img src="img/uk.png" class="lang" alt="English"></a>
     </div>
     <div class="content">
       <p>Desarrollo de aplicaciones de entretenimiento y utilidades para tu dispositivo Android.</p>
-      <img src="codelaptop-1024x683.jpg" class="webimage" alt="Mulakovich">
+      <img src="img/codelaptop-1024x683.jpg" class="webimage" alt="Mulakovich">
       <h3>Nuestras Apps:</h3>
       <div class="appsbox">
         <div class="title">
           <div class="left">
-            <img src="2048logo.webp" alt="2048 EL JUEGO">2048 EL JUEGO
+            <img src="img/2048logo.webp" alt="2048 EL JUEGO">2048 EL JUEGO
           </div>
           <a href="https://play.google.com/store/apps/details?id=com.mulakovich.game2048&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank">
             <img alt="Get it on Google Play" class="badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
@@ -189,6 +196,6 @@
     </div>
   </div>
   <footer class="headerfooter">
-    <a href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank"><img src="mulakovich logo.png" alt="Mulakovich" class="logo"><a/>apps made with love ❤️</footer>
+    <a href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank"><img src="img/mklogo.png" alt="Mulakovich" class="logo"><a/>apps made with love ❤️</footer>
 </body>
 </html>
