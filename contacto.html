@@ -45,6 +45,12 @@
       margin: 0;
     }
 
+    p {
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
     .container {
       display: flex;
       flex-direction: row;
@@ -84,19 +90,6 @@
       border-radius: 5px;
     }
 
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: center; /* Aligns elements to the sides */
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-
-    .title .left {
-      display: flex;
-      align-items: center;
-    }
-
     .left img {
       width: 50px;
       height: auto;
@@ -117,10 +110,6 @@
       .container {
         flex-direction: column;
       }
-
-      .title {
-        font-size: 1rem;
-      }
     }
 
     @media (max-width: 480px) {
@@ -138,10 +127,6 @@
 
       .sidebar {
         width: auto;
-      }
-
-      .title {
-        font-size: 0.9rem;
       }
     }
   </style>
@@ -190,7 +175,7 @@
       <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary float-right">
+    <button type="submit" class="btn btn-primary float-center">
       <i class="fa fa-paper-plane"></i> 
         Enviar
     </button>
