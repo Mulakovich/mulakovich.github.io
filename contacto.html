@@ -6,6 +6,8 @@
   <title>Mulakovich Apps - Contacto</title>
   <link rel="icon" type="image/x-icon" href="img/mklogo.png">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -82,10 +84,23 @@
       border-radius: 5px;
     }
 
-    p {
-      line-height: 1.6;
-      text-align: center;
-      margin-bottom: 1.5rem;
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Aligns elements to the sides */
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .title .left {
+      display: flex;
+      align-items: center;
+    }
+
+    .left img {
+      width: 50px;
+      height: auto;
+      border-radius: 10%;
     }
 
     .lang {
@@ -101,6 +116,10 @@
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+      }
+
+      .title {
+        font-size: 1rem;
       }
     }
 
@@ -120,6 +139,10 @@
       .sidebar {
         width: auto;
       }
+
+      .title {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -137,13 +160,47 @@
       <a href="privacidad.html">Política de Privacidad</a>
     </div>
     <div class="content">
-      <p>Para cualquier cosa que nos quieras decir</p>
-  <p><form method="post" action="https://forms.un-static.com/forms/5e628a85265ddbe68827ab64fca47f7ddb4aceff">
-  <input type="text" name="name" placeholder="Tu Nombre" required>
-  <input type="email" name="email" placeholder="Tu E-mail" required>
-  <textarea name="message" cols="40" rows="15"></textarea>
-  <button type="submit">Enviar</button>
-</form></p>
+      <div class="title">
+      <div class="left">
+            <img src="img/2048logo.webp" alt="2048 EL JUEGO">2048 EL JUEGO
+          </div>
+    </div>
+<p>Para cualquier cosa que nos quieras decir</p>
+      <form action="https://forms.un-static.com/forms/5e628a85265ddbe68827ab64fca47f7ddb4aceff" method="POST">
+    <h3 style="text-align: center;">Contacto</h3>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-white">
+            <i class="fa fa-user"></i>&nbsp
+          </span>
+        </div>
+        <input name="name" type="name" placeholder="Nombre" class="form-control border-left-0" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-white">
+            <i class="fa fa-envelope"></i>
+          </span>
+        </div>
+        <input name="email" type="email" placeholder="Email" class="form-control border-left-0" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary float-right">
+      <i class="fa fa-paper-plane"></i> 
+        Enviar
+    </button>
+  </form>
+    </div>
   </div>
   <footer class="headerfooter">
     <a href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank"><img src="img/mklogo.png" alt="Mulakovich" class="logo"><a/>apps made with love ❤️</footer>
