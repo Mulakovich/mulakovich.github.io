@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mulakovich Apps - Contact</title>
+  <link rel="icon" type="image/x-icon" href="img/mklogo.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" />
+  <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: #f5f5f5;
+      padding: 0 1rem;
+    }
+
+    .headerfooter {
+      background-color: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 0;
+      width: 100%;
+      max-width: 1200px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 60px;
+      height: auto;
+      margin-right: 1rem;
+      margin-left: auto;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .sidebar {
+      width: 20%;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .sidebar a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .sidebar a:hover {
+      color: #007bff;
+      transform: translateY(-2px);
+    }
+
+    .content {
+      width: 80%;
+      padding: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .lang {
+      margin-left: auto;
+      margin-right: 0.5rem;
+    }
+
+    .lang img {
+      width: 32px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+      
+      .content {
+        width: auto;
+      }
+
+      .sidebar {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="headerfooter">
+    <img src="img/mklogo.png" alt="Mulakovich" class="logo">
+    <h1>Mulakovich Apps</h1>
+    <div class="lang"><a href="index.html"><img src="img/spain.png" class="lang" alt="Spanish"></a></div>
+  </header>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Mulakovich</h3>
+      <a href="index_en.html">Apps</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="content">
+<p>For anything you want to tell us 🙂</p>
+      <form action="https://forms.un-static.com/forms/5e628a85265ddbe68827ab64fca47f7ddb4aceff" method="POST">
+    <h3 style="text-align: center;">Contact Us</h3>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-white">
+            <i class="fa fa-user"></i>&nbsp
+          </span>
+        </div>
+        <input name="name" type="name" placeholder="Name" class="form-control border-left-0" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-white">
+            <i class="fa fa-envelope"></i>
+          </span>
+        </div>
+        <input name="email" type="email" placeholder="Email" class="form-control border-left-0" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary d-block mx-auto">
+      <i class="fa fa-paper-plane"></i> 
+        Send
+    </button>
+  </form>
+    </div>
+  </div>
+  <footer class="headerfooter">
+    <a href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank"><img src="img/mklogo.png" alt="Mulakovich" class="logo"><a/>apps made with love ❤️</footer>
+</body>
+</html>
