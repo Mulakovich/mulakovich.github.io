@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad — Horario Clases</title>
+<meta name="description" content="Política de privacidad de la aplicación Horario Clases desarrollada por Mulakovich.">
+<link rel="icon" type="image/png" href="img/mklogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="back-link" href="index.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <span data-i18n>
+        <span lang="es">Volver</span>
+        <span lang="en">Back</span>
+      </span>
+    </a>
+    <nav>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="privacy-hero">
+  <div class="wrap">
+    <div class="privacy-hero-inner">
+      <img class="privacy-hero-icon" src="img/hc_logo.png" alt="Horario Clases">
+      <div class="privacy-hero-text">
+        <p class="privacy-hero-app" data-i18n>
+          <span lang="es">política de privacidad</span>
+          <span lang="en">privacy policy</span>
+        </p>
+        <h1 class="privacy-hero-title">Horario Clases</h1>
+        <p class="privacy-hero-sub" data-i18n>
+          <span lang="es">Desarrollado por Mulakovich · <a href="index.html">mulakovich.github.io</a></span>
+          <span lang="en">Developed by Mulakovich · <a href="index.html">mulakovich.github.io</a></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy content -->
+<section class="privacy-section">
+  <div class="wrap">
+
+    <!-- Lang selector -->
+    <div class="privacy-lang-tabs">
+      <button class="privacy-lang-tab active" id="tab-es" onclick="setLang('es')">
+        <span class="flag">🇪🇸</span> Español
+      </button>
+      <button class="privacy-lang-tab" id="tab-en" onclick="setLang('en')">
+        <span class="flag">🇬🇧</span> English
+      </button>
+    </div>
+
+    <!-- ── Español ── -->
+    <div class="privacy-doc active" id="doc-es">
+      <h2>Política de privacidad</h2>
+      
+      <p style="color: var(--subtle); margin-bottom: 20px; font-size: 15px;">En <strong>Horario Clases</strong>, valoramos tu privacidad. Esta aplicación está diseñada para funcionar de forma totalmente local, lo que significa que tus datos te pertenecen únicamente a ti.</p>
+
+      <div class="privacy-block">
+        <h3>1. Recopilación de Datos</h3>
+        <p>No recopilamos, almacenamos ni compartimos ninguna información personal en servidores externos. Todos los datos que introduces (nombres de asignaturas, horarios, notas, etc.) se almacenan exclusivamente en la memoria interna de tu dispositivo Android mediante una base de datos local cifrada por el sistema.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>2. Permisos Utilizados</h3>
+        <ul class="privacy-list">
+          <li><strong>Notificaciones:</strong> Para avisarte antes de que comiencen tus clases.</li>
+          <li><strong>Alarmas Exactas:</strong> Para garantizar que los recordatorios suenen exactamente a la hora configurada.</li>
+          <li><strong>Inicio (Boot):</strong> Para reactivar tus recordatorios automáticamente si reinicias el teléfono.</li>
+        </ul>
+      </div>
+
+      <div class="privacy-block">
+        <h3>3. Servicios de Terceros</h3>
+        <p>La aplicación utiliza los servicios de Google Play (como el sistema de reseñas in-app) que pueden recopilar datos técnicos anónimos de uso según los términos de servicio de Google.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>4. Control del Usuario</h3>
+        <p>Puedes eliminar todos tus datos en cualquier momento simplemente borrando el horario dentro de la app o desinstalando la aplicación.</p>
+      </div>
+    </div>
+
+    <!-- ── English ── -->
+    <div class="privacy-doc" id="doc-en">
+      <h2>Privacy Policy</h2>
+
+      <p style="color: var(--subtle); margin-bottom: 20px; font-size: 15px;">At <strong>Horario Clases</strong>, we value your privacy. This application is designed to function entirely locally, meaning your data belongs solely to you.</p>
+
+      <div class="privacy-block">
+        <h3>1. Data Collection</h3>
+        <p>We do not collect, store, or share any personal information on external servers. All data you input (subject names, schedules, notes, etc.) is stored exclusively in your Android device's internal memory using a system-encrypted local database.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>2. Permissions Used</h3>
+        <ul class="privacy-list">
+          <li><strong>Notifications:</strong> To alert you before your classes start.</li>
+          <li><strong>Exact Alarms:</strong> To ensure reminders trigger exactly at the scheduled time.</li>
+          <li><strong>Boot:</strong> To automatically reschedule your reminders if you restart your phone.</li>
+        </ul>
+      </div>
+
+      <div class="privacy-block">
+        <h3>3. Third-Party Services</h3>
+        <p>The app uses Google Play services (such as the in-app review system) which may collect anonymous technical usage data according to Google's terms of service.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>4. User Control</h3>
+        <p>You can delete all your data at any time by simply deleting the schedules within the app or uninstalling the application.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="footer-brand" href="index.html">
+      <img src="img/mklogo.png" alt="Mulakovich">
+      <span data-i18n>
+        <span lang="es">Volver a las apps</span>
+        <span lang="en">Back to apps</span>
+      </span>
+    </a>
+    <span class="footer-copy">© <span id="year"></span> Mulakovich</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('tab-es').classList.toggle('active', lang === 'es');
+    document.getElementById('tab-en').classList.toggle('active', lang === 'en');
+    document.getElementById('doc-es').classList.toggle('active', lang === 'es');
+    document.getElementById('doc-en').classList.toggle('active', lang === 'en');
+
+    try { localStorage.setItem('mk-lang', lang); } catch(e) {}
+  }
+
+  (function () {
+    try {
+      var saved = localStorage.getItem('mk-lang');
+      if (saved === 'en') setLang('en');
+    } catch(e) {}
+  })();
+</script>
+
+</body>
+</html>

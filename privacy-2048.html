@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de privacidad — 2048 TwentyFortyEight</title>
+<meta name="description" content="Política de privacidad de la aplicación 2048 TwentyFortyEight desarrollada por Mulakovich.">
+<link rel="icon" type="image/png" href="img/mklogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="back-link" href="index.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      <span data-i18n>
+        <span lang="es">Volver</span>
+        <span lang="en">Back</span>
+      </span>
+    </a>
+    <nav>
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="privacy-hero">
+  <div class="wrap">
+    <div class="privacy-hero-inner">
+      <img class="privacy-hero-icon" src="img/2048_logo.png" alt="2048 TwentyFortyEight">
+      <div class="privacy-hero-text">
+        <p class="privacy-hero-app" data-i18n>
+          <span lang="es">política de privacidad</span>
+          <span lang="en">privacy policy</span>
+        </p>
+        <h1 class="privacy-hero-title">2048 TwentyFortyEight</h1>
+        <p class="privacy-hero-sub" data-i18n>
+          <span lang="es">Desarrollado por Mulakovich · <a href="index.html">mulakovich.github.io</a></span>
+          <span lang="en">Developed by Mulakovich · <a href="index.html">mulakovich.github.io</a></span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Privacy content -->
+<section class="privacy-section">
+  <div class="wrap">
+
+    <!-- Lang selector -->
+    <div class="privacy-lang-tabs">
+      <button class="privacy-lang-tab active" id="tab-es" onclick="setLang('es')">
+        <span class="flag">🇪🇸</span> Español
+      </button>
+      <button class="privacy-lang-tab" id="tab-en" onclick="setLang('en')">
+        <span class="flag">🇬🇧</span> English
+      </button>
+    </div>
+
+    <!-- ── Español ── -->
+    <div class="privacy-doc active" id="doc-es">
+      <h2>Política de privacidad</h2>
+
+      <div class="privacy-block">
+        <h3>¿Quién solicita datos?</h3>
+        <p><strong>Aplicación:</strong> 2048 TwentyFortyEight</p>
+        <p><strong>Desarrollador:</strong> Mulakovich</p>
+        <p><strong>Web:</strong> <a href="index.html">mulakovich.github.io</a></p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>¿Qué datos solicitamos?</h3>
+        <p>Esta aplicación solicita acceso al perfil de usuario de Google Play Juegos. Su instalación no requiere permisos especiales en el dispositivo.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>¿Por qué solicitamos datos?</h3>
+        <p>La aplicación utiliza los servicios de Google Play Juegos para logros y clasificaciones. Se pedirá al usuario que inicie sesión con su perfil de Google Play Juegos para poder desbloquear logros y mostrar su nombre en las clasificaciones.</p>
+        <p>El usuario puede cerrar sesión en cualquier momento desde el botón «Opciones» de la aplicación o desde la interfaz de Google Play Juegos. <strong>No se almacena ningún dato del perfil de Google Play Juegos dentro de la aplicación, ni se comparte ninguna información con terceros.</strong></p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>Anuncios</h3>
+        <p>Se muestran anuncios en la aplicación mediante la red de <strong>AdMob</strong> de Google.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>Eliminación de cuenta y datos de usuario</h3>
+        <p>La aplicación permite el acceso como <strong>«Invitado»</strong> sin necesidad de crear ninguna cuenta. En este modo, todas las puntuaciones máximas se guardan localmente en tu dispositivo y no se recopila ningún dato personal.</p>
+        <p>Si decides iniciar sesión con Google Play Juegos (OAuth) para guardar logros y clasificaciones, no almacenamos tus credenciales ni tus datos personales en servidores propios; toda la información está vinculada directamente a tu cuenta de Google.</p>
+        <p>Si deseas revocar el acceso del juego a tu cuenta de Google o eliminar tus datos de forma permanente, puedes hacerlo siguiendo estos pasos oficiales:</p>
+        <ol class="steps">
+          <li data-n="1">Abre la app de Google Play Juegos en tu dispositivo.</li>
+          <li data-n="2">Toca el menú de tres puntos (Más) en la esquina superior derecha y selecciona <em>Ajustes</em>.</li>
+          <li data-n="3">Ve a la sección <em>«Eliminar cuenta y datos de Play Juegos»</em>.</li>
+          <li data-n="4">Busca el nombre de este juego en la lista y toca <em>Eliminar</em>.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ── English ── -->
+    <div class="privacy-doc" id="doc-en">
+      <h2>Privacy Policy</h2>
+
+      <div class="privacy-block">
+        <h3>Who is requesting data?</h3>
+        <p><strong>App:</strong> 2048 TwentyFortyEight</p>
+        <p><strong>Developer:</strong> Mulakovich</p>
+        <p><strong>Website:</strong> <a href="index.html">mulakovich.github.io</a></p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>What data do we request?</h3>
+        <p>This application requests access to the Google Play Games user profile. Its installation does not require any special permissions on the device.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>Why do we request data?</h3>
+        <p>The app uses Google Play Games services for achievements and leaderboards. The user will be asked to log in with their Google Play Games profile to unlock achievements and display their name on leaderboards.</p>
+        <p>The user can log out at any time from the app's "Settings" button or the Google Play Games interface. <strong>No data from the Google Play Games profile is stored within the app, and no information is shared with third parties.</strong></p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>Ads</h3>
+        <p>Ads are displayed in the app via Google's <strong>AdMob</strong> network.</p>
+      </div>
+
+      <div class="privacy-block">
+        <h3>Account deletion and user data removal</h3>
+        <p>The application allows <strong>"Guest"</strong> access without requiring you to create any account. In this mode, all high scores are saved locally on your device and no personal data is collected.</p>
+        <p>If you choose to log in via Google Play Games (OAuth) to save achievements and leaderboards, we do not store your credentials or personal data on our own servers. All such data is linked directly to your Google Account.</p>
+        <p>If you wish to revoke the game's access to your Google Account or permanently delete your game data, you can do so by following these official steps:</p>
+        <ol class="steps">
+          <li data-n="1">Open the Google Play Games app on your device.</li>
+          <li data-n="2">Tap the three-dot menu (More) in the top right corner and select <em>Settings</em>.</li>
+          <li data-n="3">Go to the <em>"Delete Play Games account &amp; data"</em> section.</li>
+          <li data-n="4">Find this game's name in the list and tap <em>Delete</em>.</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="footer-brand" href="index.html">
+      <img src="img/mklogo.png" alt="Mulakovich">
+      <span data-i18n>
+        <span lang="es">Volver a las apps</span>
+        <span lang="en">Back to apps</span>
+      </span>
+    </a>
+    <span class="footer-copy">© <span id="year"></span> Mulakovich</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+
+    // header toggle
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
+    // privacy lang tabs
+    document.getElementById('tab-es').classList.toggle('active', lang === 'es');
+    document.getElementById('tab-en').classList.toggle('active', lang === 'en');
+
+    // privacy docs
+    document.getElementById('doc-es').classList.toggle('active', lang === 'es');
+    document.getElementById('doc-en').classList.toggle('active', lang === 'en');
+
+    try { localStorage.setItem('mk-lang', lang); } catch(e) {}
+  }
+
+  // Restore saved language on load
+  (function () {
+    try {
+      var saved = localStorage.getItem('mk-lang');
+      if (saved === 'en') setLang('en');
+    } catch(e) {}
+  })();
+</script>
+
+</body>
+</html>

@@ -4,371 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mulakovich Apps</title>
-<link rel="icon" type="image/x-icon" href="img/mklogo.png">
+<meta name="description" content="Aplicaciones Android desarrolladas por Mulakovich. Entretenimiento y utilidades para tu dispositivo.">
+<link rel="icon" type="image/png" href="img/mklogo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#11141a;
-    --bg-soft:#161a22;
-    --card:#1b212b;
-    --card-border:#2a3140;
-    --text:#eef1f5;
-    --muted:#8d96a6;
-    --mint:#5be6a8;
-    --mint-soft:rgba(91,230,168,.12);
-    --amber:#ffb454;
-    --line:#262d3a;
-    --radius:18px;
-    --maxw:980px;
-  }
-
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      radial-gradient(800px 500px at 85% -10%, rgba(91,230,168,.10), transparent 60%),
-      radial-gradient(700px 500px at -10% 10%, rgba(255,180,84,.07), transparent 55%),
-      var(--bg);
-    color:var(--text);
-    font-family:'Inter', system-ui, sans-serif;
-    line-height:1.55;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.display{
-    font-family:'Space Grotesk', 'Inter', sans-serif;
-    letter-spacing:-0.01em;
-  }
-  .mono{font-family:'JetBrains Mono', monospace;}
-
-  a{color:var(--mint);}
-
-  .wrap{
-    max-width:var(--maxw);
-    margin:0 auto;
-    padding:0 24px;
-  }
-
-  /* ===== Header ===== */
-  header{
-    border-bottom:1px solid var(--line);
-    padding:22px 0;
-    position:sticky;
-    top:0;
-    background:rgba(17,20,26,.85);
-    -webkit-backdrop-filter:blur(10px);
-    backdrop-filter:blur(10px);
-    z-index:50;
-  }
-  .header-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-  }
-  .brand-mark{
-    width:38px;height:38px;
-    border-radius:11px;
-    background:linear-gradient(135deg, var(--mint), #2fb887);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    color:#0c1410;
-    font-size:18px;
-    flex-shrink:0;
-  }
-  .brand-name{
-    font-weight:600;
-    font-size:17px;
-    letter-spacing:-0.01em;
-  }
-  .brand-tag{
-    font-size:12px;
-    color:var(--muted);
-    margin-top:1px;
-  }
-
-  nav{display:flex;align-items:center;gap:22px;}
-  nav a.navlink{
-    color:var(--muted);
-    text-decoration:none;
-    font-size:14px;
-    font-weight:500;
-    transition:color .15s ease;
-  }
-  nav a.navlink:hover{color:var(--text);}
-
-  .lang-toggle{
-    display:flex;
-    border:1px solid var(--card-border);
-    border-radius:999px;
-    overflow:hidden;
-    background:var(--bg-soft);
-  }
-  .lang-toggle button{
-    border:none;
-    background:transparent;
-    color:var(--muted);
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    font-weight:500;
-    padding:7px 13px;
-    cursor:pointer;
-    transition:.15s ease;
-  }
-  .lang-toggle button.active{
-    background:var(--mint);
-    color:#0c1410;
-  }
-
-  /* ===== Hero ===== */
-  .hero{
-    padding:72px 0 56px;
-    border-bottom:1px solid var(--line);
-  }
-  .eyebrow{
-    font-family:'JetBrains Mono',monospace;
-    font-size:12.5px;
-    color:var(--mint);
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    margin:0 0 16px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .eyebrow::before{
-    content:"";
-    width:7px;height:7px;
-    border-radius:50%;
-    background:var(--mint);
-    box-shadow:0 0 0 4px var(--mint-soft);
-  }
-  .hero h1{
-    font-size:clamp(32px,5vw,48px);
-    line-height:1.08;
-    margin:0 0 18px;
-    max-width:680px;
-  }
-  .hero p.lead{
-    font-size:17px;
-    color:var(--muted);
-    max-width:520px;
-    margin:0;
-  }
-
-  /* ===== App grid ===== */
-  .section{padding:56px 0;}
-  .section-title{
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:.12em;
-    color:var(--muted);
-    font-family:'JetBrains Mono',monospace;
-    margin:0 0 28px;
-  }
-
-  .app-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    align-items:start;
-  }
-  @media (max-width:720px){
-    .app-grid{grid-template-columns:1fr;}
-  }
-
-  .app-card{
-    background:var(--card);
-    border:1px solid var(--card-border);
-    border-radius:var(--radius);
-    padding:26px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    transition:border-color .2s ease, transform .2s ease;
-  }
-  .app-card:hover{
-    border-color:#3a4456;
-    transform:translateY(-2px);
-  }
-
-  .app-top{
-    display:flex;
-    align-items:center;
-    gap:14px;
-  }
-  .app-icon{
-    width:56px;height:56px;
-    border-radius:14px;
-    object-fit:cover;
-    flex-shrink:0;
-    background:#0e1218;
-    border:1px solid var(--card-border);
-  }
-  .app-name{
-    font-size:18px;
-    font-weight:600;
-    margin:0 0 3px;
-  }
-  .app-store-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-family:'JetBrains Mono',monospace;
-    font-size:11px;
-    color:var(--muted);
-  }
-  .app-desc{
-    color:#c4cad4;
-    font-size:14.5px;
-    margin:0;
-  }
-  .app-howto{
-    background:var(--bg-soft);
-    border:1px solid var(--card-border);
-    border-radius:12px;
-    padding:12px 14px;
-    font-size:13px;
-    color:var(--muted);
-  }
-  .app-howto b{color:var(--text);}
-
-  .app-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:auto;
-    padding-top:6px;
-  }
-  .btn{
-    display:inline-flex;
-    align-items:center;
-    gap:7px;
-    border-radius:10px;
-    padding:9px 14px;
-    font-size:13px;
-    font-weight:600;
-    text-decoration:none;
-    border:1px solid var(--card-border);
-    color:var(--text);
-    background:var(--bg-soft);
-    cursor:pointer;
-    transition:.15s ease;
-  }
-  .btn:hover{border-color:var(--mint);color:var(--mint);}
-  .btn.primary{
-    background:var(--mint);
-    color:#0c1410;
-    border-color:var(--mint);
-  }
-  .btn.primary:hover{
-    background:#4fd99a;
-    color:#0c1410;
-  }
-  .btn .chev{
-    transition:transform .2s ease;
-    font-size:11px;
-  }
-  .btn[aria-expanded="true"] .chev{transform:rotate(180deg);}
-
-  /* ===== Privacy accordion ===== */
-  .privacy-panel{
-    overflow:hidden;
-    max-height:0;
-    transition:max-height .3s ease;
-  }
-  .privacy-panel.open{max-height:1400px;}
-  .privacy-inner{
-    border-top:1px dashed var(--card-border);
-    margin-top:8px;
-    padding-top:16px;
-  }
-  .privacy-tabs{
-    display:flex;
-    gap:8px;
-    margin-bottom:14px;
-  }
-  .privacy-tab{
-    border:1px solid var(--card-border);
-    background:transparent;
-    color:var(--muted);
-    border-radius:8px;
-    padding:6px 12px;
-    font-size:12.5px;
-    font-family:'JetBrains Mono',monospace;
-    cursor:pointer;
-  }
-  .privacy-tab.active{
-    background:var(--mint-soft);
-    border-color:var(--mint);
-    color:var(--mint);
-  }
-  .privacy-content{
-    font-size:13.5px;
-    color:#c4cad4;
-    background:var(--bg-soft);
-    border:1px solid var(--card-border);
-    border-radius:12px;
-    padding:18px 18px 4px;
-  }
-  .privacy-content h4{
-    font-size:13px;
-    margin:0 0 6px;
-    color:var(--text);
-    font-family:'JetBrains Mono',monospace;
-    letter-spacing:.02em;
-  }
-  .privacy-content p{margin:0 0 16px;}
-  .privacy-content p:last-child{margin-bottom:0;}
-  .privacy-lang-block{display:none;}
-  .privacy-lang-block.active{display:block;}
-
-  /* ===== Footer ===== */
-  footer{
-    border-top:1px solid var(--line);
-    padding:32px 0 44px;
-  }
-  .footer-inner{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:14px;
-    flex-wrap:wrap;
-  }
-  .footer-love{
-    color:var(--muted);
-    font-size:13.5px;
-    text-decoration:none;
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .footer-love img{width:24px;height:24px;border-radius:6px;}
-  .footer-love:hover{color:var(--text);}
-
-  [data-i18n] [lang="en"]{display:none;}
-  html[data-lang="en"] [data-i18n] [lang="es"]{display:none;}
-  html[data-lang="en"] [data-i18n] [lang="en"]{display:inline;}
-  html[data-lang="es"] [data-i18n] [lang="es"]{display:inline;}
-
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none !important;}
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="wrap header-inner">
-    <div class="brand">
+    <a class="brand" href="index.html">
       <div class="brand-mark">M</div>
       <div>
         <div class="brand-name">Mulakovich</div>
@@ -377,14 +24,9 @@
           <span lang="en">Android apps</span>
         </div>
       </div>
-    </div>
+    </a>
     <nav>
-      <a class="navlink" href="#apps" data-i18n>
-        <span lang="es">Apps</span><span lang="en">Apps</span>
-      </a>
-      <a class="navlink" href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank" rel="noopener" data-i18n>
-        <span lang="es">Google Play</span><span lang="en">Google Play</span>
-      </a>
+      <a class="navlink" href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank" rel="noopener">Google Play</a>
       <div class="lang-toggle" role="group" aria-label="Idioma / Language">
         <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
         <button id="btn-en" onclick="setLang('en')">EN</button>
@@ -400,164 +42,99 @@
       <span lang="en">independent development</span>
     </p>
     <h1 data-i18n>
-      <span lang="es">Apps sencillas, hechas con cariño.</span>
-      <span lang="en">Simple apps, made with love.</span>
+      <span lang="es">Apps sencillas, hechas <em>con cariño</em>.</span>
+      <span lang="en">Simple apps, made <em>with love</em>.</span>
     </h1>
     <p class="lead" data-i18n>
-      <span lang="es">Desarrollo de aplicaciones de entretenimiento y utilidades para tu dispositivo Android.</span>
-      <span lang="en">Development of entertainment applications and tools for your Android device.</span>
+      <span lang="es">Aplicaciones de entretenimiento y utilidades para tu dispositivo Android, desarrolladas de forma independiente.</span>
+      <span lang="en">Entertainment apps and tools for your Android device, independently developed.</span>
     </p>
   </div>
 </section>
 
-<section class="section" id="apps">
+<section class="section">
   <div class="wrap">
-    <p class="section-title" data-i18n>
+    <p class="section-label" data-i18n>
       <span lang="es">// nuestras apps</span>
       <span lang="en">// our apps</span>
     </p>
 
     <div class="app-grid">
 
-      <!-- 2048 -->
+      <!-- 2048 TwentyFortyEight -->
       <article class="app-card">
         <div class="app-top">
-          <img class="app-icon" src="https://mulakovich.github.io/img/2048_logo.png" alt="2048 TwentyFortyEight">
+          <img class="app-icon" src="img/2048_logo.png" alt="2048 TwentyFortyEight">
           <div>
-            <h3 class="app-name">2048 TwentyFortyEight</h3>
-            <span class="app-store-badge" data-i18n>
-              <span lang="es">📲 Disponible en Google Play</span>
-              <span lang="en">📲 Available on Google Play</span>
+            <h2 class="app-name">2048 TwentyFortyEight</h2>
+            <span class="app-badge" data-i18n>
+              <span lang="es">📲 Google Play</span>
+              <span lang="en">📲 Google Play</span>
             </span>
           </div>
         </div>
 
         <p class="app-desc" data-i18n>
-          <span lang="es">¡Otra versión más del popular juego 2048, con más funciones y mejoras como la integración de Google Play Juegos para clasificaciones y logros!</span>
-          <span lang="en">Yet another version of the popular game 2048, with more features and enhancements like Google Play Games integration for leaderboards and achievements!</span>
+          <span lang="es">Una versión del popular juego 2048 con mejoras adicionales: integración con Google Play Juegos para clasificaciones y logros, modos de juego extra y más.</span>
+          <span lang="en">A version of the popular 2048 game with extra features: Google Play Games integration for leaderboards and achievements, extra game modes, and more.</span>
         </p>
 
-        <div class="app-howto" data-i18n>
-          <span lang="es"><b>Cómo jugar:</b> usa los dedos para mover las celdas. Las celdas con el mismo número se convierten en una mayor al tocarse. ¡Júntalas todas para alcanzar 2048!</span>
-          <span lang="en"><b>How to play:</b> use your fingers to move the tiles. Tiles with the same number merge into one when they touch. Add them up to reach 2048!</span>
+        <div class="app-note" data-i18n>
+          <span lang="es"><b>Cómo jugar:</b> Desliza para mover las fichas. Las fichas con el mismo número se fusionan al tocarse. ¡Llega a 2048 y más allá!</span>
+          <span lang="en"><b>How to play:</b> Swipe to move the tiles. Matching tiles merge when they touch. Reach 2048 and beyond!</span>
         </div>
 
         <div class="app-actions">
           <a class="btn primary" target="_blank" rel="noopener"
-             href="https://play.google.com/store/apps/details?id=com.mulakovich.game2048&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" data-i18n>
-            <span lang="es">Descargar</span><span lang="en">Download</span>
+             href="https://play.google.com/store/apps/details?id=com.mulakovich.game2048">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20.5A1.5 1.5 0 0 1 3.5 19V5A1.5 1.5 0 0 1 5 3.5h.09l13 8-13 9z"/><path d="M20.5 12l-4-2.46L14 11l2.56 1.57L14 14l2.5 1.46L20.5 12z" opacity=".6"/></svg>
+            <span data-i18n><span lang="es">Descargar</span><span lang="en">Download</span></span>
           </a>
-          <button class="btn" aria-expanded="false" onclick="togglePanel('panel-2048', this)" data-i18n>
-            <span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span>
-            <span class="chev">▾</span>
-          </button>
-        </div>
-
-        <div class="privacy-panel" id="panel-2048">
-          <div class="privacy-inner">
-            <div class="privacy-tabs">
-              <button class="privacy-tab active" onclick="setPrivacyLang('2048','es', this)">ES</button>
-              <button class="privacy-tab" onclick="setPrivacyLang('2048','en', this)">EN</button>
-            </div>
-            <div class="privacy-content">
-              <div class="privacy-lang-block active" data-privacy-lang="es" data-privacy-app="2048">
-                <h4>¿Quién solicita datos?</h4>
-                <p>App: 2048 TwentyFortyEight · Desarrollador: Mulakovich · Web: <a href="https://mulakovich.github.io" target="_blank" rel="noopener">mulakovich.github.io</a></p>
-                <h4>¿Qué datos solicitamos?</h4>
-                <p>Esta aplicación solicita acceso al perfil de usuario de Google Play Juegos y su instalación no requiere de permisos especiales en el dispositivo.</p>
-                <h4>¿Por qué solicitamos datos?</h4>
-                <p>Esta aplicación utiliza los servicios de Google Play Juegos para logros y clasificaciones. Se pedirá al usuario que se logue con su perfil de Google Play Juegos con el propósito de poder desbloquear logros y mostrar su nombre de usuario en las clasificaciones. El usuario puede deslogarse en cualquier momento desde el botón «Opciones» de la aplicación o desde la interfaz de Google Play Juegos. No se almacenará dentro de la aplicación ningún dato de tu perfil de Google Play Juegos, ni se compartirá ninguna información.</p>
-                <h4>Anuncios</h4>
-                <p>Se muestran anuncios en la aplicación mediante la red de AdMob de Google.</p>
-                <h4>Eliminación de Cuentas y Datos de Usuario</h4>
-                <p>Nuestra aplicación no requiere la creación de una cuenta propia para poder jugar, ya que permite el acceso como "Invitado". En el modo de invitado, todas las puntuaciones máximas se guardan localmente en tu dispositivo y no recopilamos ningún dato personal.</p>
-                <p>Si decides iniciar sesión a través de Google Play Juegos (OAuth) para guardar tus logros y clasificaciones, nosotros no almacenamos tus credenciales ni tus datos personales en servidores propios; toda esta información está vinculada directamente a tu cuenta de Google.</p>
-                <p>Si deseas revocar el acceso del juego a tu cuenta de Google o eliminar tus datos de juego de forma permanente, puedes hacerlo tú mismo siguiendo estos pasos oficiales de Google: 1. Abre la aplicación móvil de Google Play Juegos. 2. Toca el botón de tres puntos (Más) en la esquina superior derecha y selecciona Ajustes. 3. Ve a la sección "Eliminar cuenta y datos de Play Juegos". 4. Busca el nombre de este juego en la lista y toca en Eliminar.</p>
-              </div>
-              <div class="privacy-lang-block" data-privacy-lang="en" data-privacy-app="2048">
-                <h4>Who is requesting data?</h4>
-                <p>App: 2048 TwentyFortyEight · Developer: Mulakovich · Website: <a href="https://mulakovich.github.io" target="_blank" rel="noopener">mulakovich.github.io</a></p>
-                <h4>What data do we request?</h4>
-                <p>This application requests access to the Google Play Games user's profile, and its installation does not require any special permissions.</p>
-                <h4>Why do we request data?</h4>
-                <p>This application uses Google Play Games services for achievements and leaderboards. The user will be asked to log in to their Google Play Games profile in order to unlock achievements and show their display name on leaderboards. The user can log out at any time from the app's "Settings" button or the Google Play Games interface. No data from the user's Google Play Games profile is stored within the app or shared with anyone.</p>
-                <h4>Ads</h4>
-                <p>Ads are displayed in the app via Google's AdMob network.</p>
-                <h4>Account Deletion and User Data Removal</h4>
-                <p>Our application does not require you to create an account with us to play, as it allows "Guest" access. In guest mode, all high scores are saved locally on your device, and we do not collect any personal data.</p>
-                <p>If you choose to log in via Google Play Games (OAuth) to save your achievements and leaderboards, we do not store your credentials or personal data on our own servers. All such game data is linked directly to your Google Account.</p>
-                <p>If you wish to revoke the game's access to your Google Account or permanently delete your game data, you can do so yourself by following these official Google steps: 1. Open the Google Play Games app on your mobile device. 2. Tap the three-dot menu (More) in the top right corner and select Settings. 3. Go to the "Delete Play Games account & data" section. 4. Under individual game data, look for this game's name and tap Delete.</p>
-              </div>
-            </div>
-          </div>
+          <a class="btn" href="privacy-2048.html" data-i18n>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span lang="es">Política de privacidad</span>
+            <span lang="en">Privacy policy</span>
+          </a>
         </div>
       </article>
 
       <!-- Horario Clases -->
       <article class="app-card">
         <div class="app-top">
-          <img class="app-icon" src="https://mulakovich.github.io/img/hc_logo.png" alt="Horario Clases">
+          <img class="app-icon" src="img/hc_logo.png" alt="Horario Clases">
           <div>
-            <h3 class="app-name" data-i18n>
-              <span lang="es">Horario Clases</span><span lang="en">Class Schedule</span>
-            </h3>
-            <span class="app-store-badge" data-i18n>
-              <span lang="es">📲 Disponible en Google Play</span>
-              <span lang="en">📲 Available on Google Play</span>
+            <h2 class="app-name" data-i18n>
+              <span lang="es">Horario Clases</span>
+              <span lang="en">Class Schedule</span>
+            </h2>
+            <span class="app-badge" data-i18n>
+              <span lang="es">📲 Google Play</span>
+              <span lang="en">📲 Google Play</span>
             </span>
           </div>
         </div>
 
         <p class="app-desc" data-i18n>
-          <span lang="es">Tu horario de clases en tu móvil, rápido y sencillo. Ten siempre tu horario de clases en tu bolsillo, con esta aplicación podrás ver rápidamente el horario del día y el de toda la semana, y editarlo según tus necesidades.</span>
-          <span lang="en">Your class schedule on your mobile, quick and easy. Always have your class schedule in your pocket — quickly see the schedule for the day and the entire week, and edit it as you need.</span>
+          <span lang="es">Tu horario de clases siempre en el bolsillo. ¡Totalmente renovado! Consulta múltiples horarios, tus clases diarias o la semana completa y personalízalo a tu gusto.</span>
+          <span lang="en">Your class schedule always in your pocket. Completely revamped! Check multiple schedules, your daily classes or the full week and customize it to your liking.</span>
         </p>
 
-        <div class="app-howto" data-i18n>
-          <span lang="es"><b>En resumen:</b> sencillo y funcional, el horario de toda la vida, ¡ahora en tu móvil!</span>
-          <span lang="en"><b>In short:</b> simple and functional, the classic schedule, now on your mobile!</span>
+        <div class="app-note" data-i18n>
+          <span lang="es"><b>En resumen:</b> Gestiona múltiples horarios, consulta el widget con tu próxima clase, recibe recordatorios y exporta tu calendario a PDF.</span>
+          <span lang="en"><b>In short:</b> Manage multiple schedules, check the widget for your next class, receive reminders, and export your calendar to PDF.</span>
         </div>
 
         <div class="app-actions">
           <a class="btn primary" target="_blank" rel="noopener"
-             href="https://play.google.com/store/apps/details?id=com.mulakovich.horarioclases&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" data-i18n>
-            <span lang="es">Descargar</span><span lang="en">Download</span>
+             href="https://play.google.com/store/apps/details?id=com.mulakovich.horarioclases">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 20.5A1.5 1.5 0 0 1 3.5 19V5A1.5 1.5 0 0 1 5 3.5h.09l13 8-13 9z"/><path d="M20.5 12l-4-2.46L14 11l2.56 1.57L14 14l2.5 1.46L20.5 12z" opacity=".6"/></svg>
+            <span data-i18n><span lang="es">Descargar</span><span lang="en">Download</span></span>
           </a>
-          <button class="btn" aria-expanded="false" onclick="togglePanel('panel-hc', this)" data-i18n>
-            <span lang="es">Política de privacidad</span><span lang="en">Privacy policy</span>
-            <span class="chev">▾</span>
-          </button>
-        </div>
-
-        <div class="privacy-panel" id="panel-hc">
-          <div class="privacy-inner">
-            <div class="privacy-tabs">
-              <button class="privacy-tab active" onclick="setPrivacyLang('hc','es', this)">ES</button>
-              <button class="privacy-tab" onclick="setPrivacyLang('hc','en', this)">EN</button>
-            </div>
-            <div class="privacy-content">
-              <div class="privacy-lang-block active" data-privacy-lang="es" data-privacy-app="hc">
-                <h4>¿Quién solicita datos?</h4>
-                <p>App: Horario Clases · Desarrollador: Mulakovich · Web: <a href="https://mulakovich.github.io" target="_blank" rel="noopener">mulakovich.github.io</a></p>
-                <h4>¿Qué datos solicitamos?</h4>
-                <p>Esta aplicación no solicita ningún dato al usuario y su instalación no requiere de permisos especiales en el dispositivo.</p>
-                <h4>¿Por qué solicitamos datos?</h4>
-                <p>Esta aplicación no solicita datos.</p>
-                <h4>Anuncios</h4>
-                <p>No se muestran anuncios en la aplicación.</p>
-              </div>
-              <div class="privacy-lang-block" data-privacy-lang="en" data-privacy-app="hc">
-                <h4>Who is requesting data?</h4>
-                <p>App: Class Schedule · Developer: Mulakovich · Website: <a href="https://mulakovich.github.io" target="_blank" rel="noopener">mulakovich.github.io</a></p>
-                <h4>What data do we request?</h4>
-                <p>This application does not request any data from the user, and its installation does not require any special permissions.</p>
-                <h4>Why do we request data?</h4>
-                <p>This application does not request any data.</p>
-                <h4>Ads</h4>
-                <p>Ads are not displayed in this app.</p>
-              </div>
-            </div>
-          </div>
+          <a class="btn" href="privacy-hc.html" data-i18n>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span lang="es">Política de privacidad</span>
+            <span lang="en">Privacy policy</span>
+          </a>
         </div>
       </article>
 
@@ -567,74 +144,35 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <a class="footer-love" href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank" rel="noopener">
-      <img src="https://mulakovich.github.io/img/mklogo.png" alt="Mulakovich">
+    <a class="footer-brand" href="https://play.google.com/store/apps/dev?id=7935023413626679351" target="_blank" rel="noopener">
+      <img src="img/mklogo.png" alt="Mulakovich">
       <span data-i18n>
         <span lang="es">apps hechas con amor ❤️</span>
         <span lang="en">apps made with love ❤️</span>
       </span>
     </a>
-    <span class="mono" style="color:var(--muted);font-size:12px;">© <span id="year"></span> Mulakovich</span>
+    <span class="footer-copy">© <span id="year"></span> Mulakovich</span>
   </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  function setLang(lang){
+  function setLang(lang) {
     document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
     document.getElementById('btn-es').classList.toggle('active', lang === 'es');
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.documentElement.setAttribute('lang', lang);
-    try{ localStorage.setItem('mk-lang', lang); }catch(e){}
-    syncPrivacyLangToSite(lang);
+    // Persist so privacy pages pick it up
+    try { localStorage.setItem('mk-lang', lang); } catch(e) {}
   }
 
-  // Pone cada bloque de política de privacidad (abierto o cerrado) en el
-  // mismo idioma que la web, para que al desplegarlo ya se vea correcto.
-  function syncPrivacyLangToSite(lang){
-    document.querySelectorAll('.privacy-tabs').forEach(function(tabs){
-      var target = null;
-      tabs.querySelectorAll('.privacy-tab').forEach(function(t){
-        t.classList.remove('active');
-        if(t.textContent.trim().toLowerCase() === lang) target = t;
-      });
-      if(target){
-        target.classList.add('active');
-        var app = target.closest('.privacy-inner').querySelectorAll('.privacy-lang-block')[0].getAttribute('data-privacy-app');
-        document.querySelectorAll('[data-privacy-app="' + app + '"]').forEach(function(b){
-          b.classList.toggle('active', b.getAttribute('data-privacy-lang') === lang);
-        });
-      }
-    });
-  }
-
-  function togglePanel(id, btn){
-    var panel = document.getElementById(id);
-    var open = panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-
-  function setPrivacyLang(app, lang, btn){
-    var tabs = btn.parentElement.querySelectorAll('.privacy-tab');
-    tabs.forEach(function(t){ t.classList.remove('active'); });
-    btn.classList.add('active');
-
-    var blocks = document.querySelectorAll('[data-privacy-app="' + app + '"]');
-    blocks.forEach(function(b){
-      b.classList.toggle('active', b.getAttribute('data-privacy-lang') === lang);
-    });
-  }
-
-  // Respeta el idioma elegido previamente, si lo hay.
-  (function(){
-    try{
+  // Restore saved language on load
+  (function () {
+    try {
       var saved = localStorage.getItem('mk-lang');
-      if(saved === 'en') setLang('en');
-      else syncPrivacyLangToSite('es');
-    }catch(e){
-      syncPrivacyLangToSite('es');
-    }
+      if (saved === 'en') setLang('en');
+    } catch(e) {}
   })();
 </script>
 
